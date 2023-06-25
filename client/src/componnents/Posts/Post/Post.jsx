@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardActions, CardContent, CardMedia, Button, Typography, ButtonBase, CardActionArea } from '@material-ui/core/';
+import { Card, CardActions, CardContent, CardMedia, Button, Typography, CardActionArea } from '@material-ui/core/';
 // import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Edit from '@material-ui/icons/Edit';
@@ -33,7 +33,9 @@ const Post = ({ post, setCurrentId }) => {
         </div>
         <Typography className={classes.title} gutterBottom variant="h5" component="h2">{post.title}</Typography>
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">{post.message}</Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {post.message.split(/\s+/).slice(0, 20).join(" ")}...
+            </Typography>
         </CardContent>
       </CardActionArea>
       {( user?.result?._id === post?.creator ) && (

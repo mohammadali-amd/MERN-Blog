@@ -11,18 +11,26 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     padding: '10px 50px',
     [theme.breakpoints.down('sm')]: {
-      flexDirection: 'column',
+      // flexDirection: 'column',
+      padding: '8px',
     },
   },
   heading: {
     color: theme.palette.primary.main,
     textDecoration: 'none',
-    fontSize: '2em',
-    fontWeight: 300,
+    fontSize: '3rem',
+    fontWeight: 700,
+    marginLeft: '1.2rem',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   },
   image: {
     marginLeft: '10px',
     marginTop: '5px',
+    [theme.breakpoints.down('sm')]: {
+      height: 40
+    },
   },
   toolbar: {
     display: 'flex',
@@ -39,8 +47,7 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
       width: 'auto',
-      marginTop: 20,
-      justifyContent: 'center',
+      // justifyContent: 'center',
     },
   },
   logout: {
@@ -54,6 +61,7 @@ export default makeStyles((theme) => ({
   brandContainer: {
     display: 'flex',
     alignItems: 'center',
+    cursor: 'pointer',
   },
   purple: {
     color: theme.palette.getContrastText(deepPurple[500]),

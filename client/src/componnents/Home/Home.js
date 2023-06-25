@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Container, Grow, Grid, Paper, AppBar, TextField, Button } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
-import { getPosts, getPostsBySearch } from '../../actions/posts';
+import { getPostsBySearch } from '../../actions/posts';
 import { useNavigate, useLocation } from 'react-router-dom';
 import ChipInput from 'material-ui-chip-input';
 
@@ -57,7 +57,7 @@ const Home = () => {
                      <TextField
                         name='search'
                         variant='outlined'
-                        label='Search Memories'
+                        label='Search Files'
                         onKeyPress={handleKeyPress}
                         fullWidth value={search}
                         onChange={(e) => setSearch(e.target.value)}
